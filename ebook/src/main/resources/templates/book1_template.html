@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Book 1 Chapter 1 Sections</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+    <script src="https://github.com/janl/mustache.js/blob/master/mustache.js"></script>
+    	<h1 align="center">Ebooks</h1>
+    	<button type="button">Home</button> <button type="button">Back</button> <button type="button">View Annotations</button>
+    	
+    	        <h2>Sections</h2>
+    			    	<table>
+    			    	{{#sections}}
+            <tr>
+                <th>Section Name</th>
+                <td>{{section_name}}</td>
+                               
+            </tr>
+            <tr>
+            <th>Content</th>
+                <td>{{content}}</td>
+                </tr>
+            
+            {{/sections}}
+        </table>
+        
+    </body>
+</html>
