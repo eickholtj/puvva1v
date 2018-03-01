@@ -28,9 +28,9 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
+  config.vm.synced_folder "./ebook", "/opt/ebook", type: "rsync", rsync__exclude: "[.git, .vagrant]"
   config.vm.synced_folder "./scripts", "/opt/ebook/scripts", type: "rsync", rsync__exclude: "[.git, .vagrant]"
   config.vm.synced_folder "./config", "/opt/ebook/config", type: "rsync", rsync__exclude: "[.git, .vagrant]"
-  config.vm.synced_folder "./ebook", "/opt/ebook", type: "rsync", rsync__exclude: "[.git, .vagrant]"
 
 
 
@@ -78,6 +78,8 @@ Vagrant.configure("2") do |config|
      # Install java and maven
      yum install -y maven     
 
+     # Populate mongoDB
+     /opt/ebook/scripts/bootstrap-dev.sh
 
   #   apt-get update
   #   apt-get install -y apache2
