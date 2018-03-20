@@ -8,26 +8,26 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.cmich.ebook.models.Ebook_book1_chap1_secRepository;
-import com.cmich.ebook.models.Ebook_book1_chapsRepository;
+import com.cmich.ebook.models.Ebook_book1_chaptersRepository;
+import com.cmich.ebook.models.Ebook_booksRepository;
 
 @RestController
 @RequestMapping("/")
-public class Ebook_book1_chap1_secController {
+public class Ebook_book1_chaptersController {
 	
 	@Autowired
-	private Ebook_book1_chap1_secRepository repository;
+	private Ebook_book1_chaptersRepository repository;
 	
 	 //GET method /list--> Reads list of books from the database.
 	 
-	@RequestMapping(value="/book1_chap1_sec", method=RequestMethod.GET)
+	@RequestMapping(value="/book1_chapters", method=RequestMethod.GET)
 	public ModelAndView books(){
 		
 		ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("book1_chap1_sec");
+        modelAndView.setViewName("book1_chapters");
 
 		List lt = repository.findAll();
-        modelAndView.addObject("book1_chap1_sec", lt);
+        modelAndView.addObject("book1_chapters", lt);
         return modelAndView;
 		
 	}

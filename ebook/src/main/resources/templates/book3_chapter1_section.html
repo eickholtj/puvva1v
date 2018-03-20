@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Book 1 Chapter 1 Sections</title>
+        <title>Book 3 Chapter 1 Sections</title>
         <link rel="stylesheet" href="css/style.css" />
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -10,13 +10,13 @@
     <script src="https://github.com/janl/mustache.js/blob/master/mustache.js"></script>
     	<h1 align="center">Ebooks</h1>
 				<a href="http://localhost:8080/books" class="button">Home</a>
-    	    	<a href="http://localhost:8080/book1_chaps" class="button">Back</a> 
+    	    	<a href="http://localhost:8080/book3_chapters" class="button">Back</a> 
     	    	<a href="http://localhost:8080/books" class="button">View Annotations</a>    	
  
     	    	   	
     	        <h2>Sections</h2>
     			    	<table>
-    			    	{{#book1_chap1_sec}}
+    			    	{{#book3_chapter1_section}}
             <tr>
                 <th>Section</th>
                 <td>{{section_name}}</td>
@@ -27,7 +27,7 @@
                 <td>{{content}}</td>
                 </tr>
             
-            {{/book1_chap1_sec}}
+            {{/book3_chapter1_section}}
         </table>
         
     </body>

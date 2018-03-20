@@ -5,8 +5,9 @@
         <link rel="stylesheet" href="css/style.css" />
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
     </head>
-    <body>
+	<body>
     	<h1 align="center">Ebooks</h1>
     	<a href="http://localhost:8080/books" class="button">Home</a>
     	
@@ -20,7 +21,7 @@
             </tr>
             {{#books}}
             <tr>
-            	<td><a href="http://localhost:8080/book1_chaps" class="button">{{book_name}}</a></td>
+            	<td><a href="http://localhost:8080/{{book_url}}" class="button">{{book_name}}</a></td>
 		<td>{{book_details}}</td>
 				
             </tr>

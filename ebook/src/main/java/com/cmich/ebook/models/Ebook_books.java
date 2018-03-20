@@ -11,9 +11,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection="books")	//@Document provides the collection name
 public class Ebook_books{
 
-	String book_url;
+	
 	String book_name;
 	String book_details;
+	String book_url;
 	
 	public String getBook_url() {
 		return book_url;

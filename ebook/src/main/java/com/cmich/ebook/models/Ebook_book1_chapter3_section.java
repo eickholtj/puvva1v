@@ -2,8 +2,8 @@ package com.cmich.ebook.models;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="book1_chap1_sec")	//@Document provides the collection name
-public class Ebook_book1_chap1_sec {
+@Document(collection="book1_chapter3_section")	//@Document provides the collection name
+public class Ebook_book1_chapter3_section {
 
 		String section_name;
 		String content;

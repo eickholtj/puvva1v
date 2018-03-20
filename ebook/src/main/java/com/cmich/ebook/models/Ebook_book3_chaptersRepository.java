@@ -7,6 +7,6 @@ package com.cmich.ebook.models;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 
-public interface Ebook_book1_chapsRepository extends MongoRepository<Ebook_book1_chaps, String> {
+public interface Ebook_book3_chaptersRepository extends MongoRepository<Ebook_book3_chapters, String> {
 
 }
