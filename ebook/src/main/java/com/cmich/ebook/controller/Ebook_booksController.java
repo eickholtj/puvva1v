@@ -32,6 +32,7 @@ public class Ebook_booksController {
 	
 	@Autowired
 	private Ebook_booksRepository repository;
+	//ebook
 	
 	 //GET method /list--> Reads list of books from the database.
 	 
