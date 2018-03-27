@@ -2,10 +2,27 @@
 <html>
     <head>
         <title>Book 1 Chapters</title>
+        <link href="http://assets.annotateit.org/annotator/v1.2.10/annotator.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="css/style.css" />
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        
+        <style>
+    	body:before {
+  		content: '';
+ 		z-index: -1;
+  		position: absolute;
+  		left: 0;
+  		right: 0;
+  		top: 0;
+  		bottom: 0;
+  		-webkit-filter: blur(10px);
+  		background: url(https://hdwallsource.com/img/2014/3/open-book-wallpaper-45039-46209-hd-wallpapers.jpg) no-repeat;
+  		background-size: cover; 
+	}	
+		body {
+		font-family: "Comic Sans MS";
+	}
+    </style> 
     </head>
     <body>
     	<h1 align="center">Ebooks</h1>
@@ -28,5 +45,19 @@
             </tr>
             {{/book1_chapters}}
         </table>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://assets.annotateit.org/annotator/v1.2.10/annotator-full.min.js"></script>
+  <script src="http://aroncarroll.com/annotator.offline.js/javascript/annotator.offline.min.js"></script>
+
+<script>
+<!-- this plugin stores all created annotations in local storage of browser. It will also fire "offline" events when the browsers connectivity changes. -->
+
+ jQuery('body').annotator().annotator("addPlugin", "Offline", {
+  
+  offline: function (plugin) {
+  }
+});
+
+</script>
     </body>
 </html>
