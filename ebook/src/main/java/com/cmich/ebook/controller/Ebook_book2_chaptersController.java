@@ -1,3 +1,6 @@
+/*This controller class contains the request mapping, GET requests received by the 
+ * service are handled in this module
+ */
 package com.cmich.ebook.controller;
 
 import java.util.List;
@@ -15,24 +18,23 @@ import com.cmich.ebook.models.Ebook_booksRepository;
 @RestController
 @RequestMapping("/")
 public class Ebook_book2_chaptersController {
-	
+
 	@Autowired
 	private Ebook_book2_chaptersRepository repository;
-	
-	 //GET method /list--> Reads list of books from the database.
-	 
+
+	//GET method /book2_chapters --> Reads list of chapters from the database.
+
 	@RequestMapping(value="/book2_chapters", method=RequestMethod.GET)
 	public ModelAndView books(){
-		
-		ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("book2_chapters");
 
+		ModelAndView modelAndView = new ModelAndView();
+		// We set the view name 'book2_chapters' to which the data need to be rendered
+		modelAndView.setViewName("book2_chapters");
+		// This operation will list all the chapters present in the 'book2_chapters'
+		// collection in the database
 		List lst = repository.findAll();
-        modelAndView.addObject("book2_chapters", lst);
-        return modelAndView;
-		
+		modelAndView.addObject("book2_chapters", lst);
+		return modelAndView;
+
 	}
-	
-	
-	
 }

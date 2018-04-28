@@ -1,6 +1,6 @@
-/*This controller class contains the request mapping, GET requests received 
-by the service are handled in this module
-*/
+/*This controller class contains the request mapping, GET requests received by the 
+ * service are handled in this module
+ */
 package com.cmich.ebook.controller;
 
 import java.util.HashMap;
@@ -29,25 +29,23 @@ import com.cmich.ebook.models.Ebook_booksRepository;
 @RestController
 @RequestMapping("/")
 public class Ebook_booksController {
-	
+
 	@Autowired
 	private Ebook_booksRepository repository;
-	//ebook
-	
-	 //GET method /list--> Reads list of books from the database.
-	 
+
+	//GET method /books --> Reads list of books from the database.
+
 	@RequestMapping(value="/books", method=RequestMethod.GET)
 	public ModelAndView books(){
-		
-		ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("books");
 
+		ModelAndView modelAndView = new ModelAndView();
+		// We set the view name 'books' to which the data need to be rendered
+		modelAndView.setViewName("books");
+		// This operation will list all the books present in the 'books'
+		// collection in the database
 		List lt = repository.findAll();
-        modelAndView.addObject("books", lt);
-        return modelAndView;
-		
+		modelAndView.addObject("books", lt);
+		return modelAndView;
+
 	}
-	
-	
-	
 }

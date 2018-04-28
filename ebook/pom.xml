@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- this pom.xml contains information about the project and configuration details used by Maven to build the project -->
+<!-- This pom.xml contains information about the project and configuration details used by Maven to build the project -->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -11,32 +11,42 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-		<parent>
+	<!-- lookup parent from repository -->
+	
+	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.1.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/> 
 	</parent>
 
 	<properties>
+	
 	<!-- Enable Java -->
+	
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 	</properties>
 
 	<dependencies>
+	
 	<!-- this dependency is used to connect the spring data to mongoDB -->
+	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId> 
 		</dependency> 
+		
 	<!-- This dependency provides the dependencies of a web application -->
+	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency> 
+		
 	<!-- This dependency will automatically retrieve the mustache templates -->
+	
 		<dependency>
 		<groupId>com.github.sps.mustache</groupId>
 		<artifactId>mustache-spring-view</artifactId>
@@ -61,7 +71,9 @@
 
 	<build>
 		<plugins>
+		
 		<!-- Spring data Maven support -->
+		
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
