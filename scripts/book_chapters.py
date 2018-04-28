@@ -1,18 +1,21 @@
+#Importing pymongo to connect to the MongoDB
 import pymongo
 from pymongo import MongoClient
+#Importing the random fucntion inorder to genrate random sample data in the database
 from random import randrange
 from random import randint
-#Connect to MongoDB 
+#Connecting to MongoDB 
 client = MongoClient('localhost')
+#Ebook is the datbase that is created within the MongoDB
 db=client.Ebook
-#Create sample data
+#Creating random sample data
 names = ['PROGRAMMING WITH LISTS','OBJECTS IN JAVA PROGRAMMING','PROGRAMMING WITH FUNCTIONS', 'FUNDAMENTAL CLOUD COMPUTING','WORKING WITH CLOUDS', 'INTRODUCTION TO DATABASE SYSTEMS','THE RELATIONAL MODEL','SQL: QUERIES', 'WRITING SIMPLE PROGRAMS','CONTROL STRUCTURES', 'COMPUTER SECURITY CONCEPTS','CRYPTOGRAPHIC TOOLS AND ALGORITHMS','SECURITY THREATS AND COUNTERMEASURES', 'DATA MODEL FOR BIG DATA','A NEW PARADIGM FOR BIG DATA']
 
 details = ['This chapter deals with creation of lists and its usage with examples in JAVA programming', 'This chapter deals with usage of objects in Java programming', 'This chapter deals with creation and usage of functions along with some examples', 'This chapter deals with few basic concepts in Database management Systems', 'This chapter deals with the organization of data items within the database', 'This chapter deals with several operations with the data in the database', 'This chapter deals with writing basic samples programs in python language', 'This chapter deals with different types of control structures and their usage with examples', 'This chapter deals with basic concepts in computer security', 'This chapter deals with several types of algorithms and tools that exists in the cryptography','This chapter deals with various attacks and security breaches, also deals with the measures that handle these attacks and breaches', 'This chapter deals with the introduction of big data and also few basic concepts in the big data', 'This chapter deals with properties of data along with different models for presenting the data and the usage of Graph Schemas', 'This chapter deals with fundamentals and basic concepts in Cloud Computing', 'This chapter deals with cloud delivery model considerations, cost metrics and pricing as well as security quality measures and SLAs']
 
 urls = ['book1_chapter1_section','book2_chapter2_section','book1_chapter2_section','book1_chapter3_section']
 book1_chapters = db.Ebook
-
+#Inserting data into the collection
 book1_chapters = db.book1_chapters.insert_many(
 		(
 			{
@@ -50,7 +53,7 @@ for x in range(1, 3):
 print('Successfully Created chapters in book 1!')
 
 book2_chapters = db.Ebook
-
+#Inserting data into the collection
 book2_chapters = db.book2_chapters.insert_many(
 		(
 			{
@@ -88,7 +91,7 @@ for x in range(1, 3):
 print('Successfully Created chapters in book 2!')
 	
 book3_chapters = db.Ebook
-
+#Inserting data into the collection
 book3_chapters = db.book3_chapters.insert_many(
 		(
 			{
@@ -119,7 +122,7 @@ for x in range(1, 3):
 print('Successfully Created chapters in book 3!')
 	
 book4_chapters = db.Ebook
-
+#Inserting data into the collection
 book4_chapters = db.book4_chapters.insert_many(
 		(
 			{
@@ -156,7 +159,7 @@ for x in range(1, 2):
 print('Successfully Created chapters in book 4!')
 	
 book5_chapters = db.Ebook
-
+#Inserting data into the collection
 book5_chapters = db.book5_chapters.insert_many(
 		(
 			{
@@ -187,7 +190,7 @@ for x in range(1, 2):
 print('Successfully Created chapters in book 5!')
 
 book6_chapters = db.Ebook
-
+#Inserting data into the collection
 book6_chapters = db.book6_chapters.insert_many(
 		(
 			{

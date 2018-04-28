@@ -1,10 +1,13 @@
+#Importing pymongo to connect to the MongoDB
 import pymongo
 from pymongo import MongoClient
+#Importing random fucntion to create the sample random data in the database
 from random import randint
-#Connect to MongoDB 
+#Connecting to MongoDB 
 client = MongoClient('localhost')
+#Ebook is the database that is created within MongoDB
 db=client.Ebook
-#Create sample data
+#Creating sample data
 names = ['PROGRAMMING WITH LISTS','OBJECTS IN JAVA PROGRAMMING','PROGRAMMING WITH FUNCTIONS', 'FUNDAMENTAL CLOUD COMPUTING','WORKING WITH CLOUDS', 'INTRODUCTION TO DATABASE SYSTEMS','THE RELATIONAL MODEL','SQL: QUERIES', 'WRITING SIMPLE PROGRAMS','CONTROL STRUCTURES', 'COMPUTER SECURITYCONCEPTS','CRYPTOGRAPHIC TOOLS AND ALGORITHMS','SECURITY THREATS AND COUNTERMEASURES', 'DATA MODEL FOR BIG DATA','A NEW PARADIGM FOR BIG DATA']
 details = ['This section deals with creation of lists and its usage with examples in JAVA programming', 'This section deals with usage of objects in Java programming', 'This section deals with creation and usage of functions along with some examples', 'This section deals with few basic concepts in Database management Systems', 'This section deals with the organization of data items within the database', 'This section deals with several operations with the data in the database', 'This section deals with writing basic samples programs in python language', 'This section deals with different types of control structures and their usage with examples', 'This section deals with basic concepts in computer sectionurity', 'This section deals with several types of algorithms and tools that exists in the cryptography','This section deals with various attacks and security breaches, also deals with the measures that handle these attacks and breaches', 'This section deals with the introduction of big data and also few basic concepts in the big data', 'This section deals with properties of data along with different models for presenting the data and the usage of Graph Schemas', 'This section deals with fundamentals and basic concepts in Cloud Computing', 'This section deals with cloud delivery model considerations, cost metrics and pricing as well as SECURITYquality measures and SLAs']
 for x in range(1, 4):

@@ -1,12 +1,16 @@
+#Importing pymongo to connect to the MongoDB
 import pymongo
 from pymongo import MongoClient
+#Importing random inorder to genrate the sample random data using random function
 from random import randrange
 from random import randint
-#Connect to MongoDB 
+#Connecting to MongoDB 
 client = MongoClient('localhost')
+#Ebook is the database that is being ceated within MongoDB
 db=client.Ebook
 
 books = db.Ebook
+#Inserting data into a collection called books
 books = db.books.insert_many(
 		(
 			{
@@ -27,7 +31,7 @@ books = db.books.insert_many(
 		)
 	);
 
-#Create random sample data
+#Creating random sample data using random function
 names = ['PRINCIPLES OF PROGRAMMING LANGUAGE by','DATABASE MANAGEMENT SYSTEM by','PYTHON PROGRAMMING: AN INTRODUCTION TO COMPUTER SCIENCE by', 'COMPUTER SECURITY: PRINCIPLES AND PRACTICE BY WILLIAM STALLINGS by', 'BIG DATA: PRINCIPLES AND BEST PRACTICES OF SCALABLE REAL-TIME DATA SYSTEMS by','CLOUD COMPUTING: CONCEPTS, TECHNOLOGY & ARCHITECTURE BY THOMAS ERL by']
 authors = ['DOWEK AND GILLES','RAGHU RAMAKRISHNAN AND JOHANNES GEHRKE','JOHN ZELLE','WILLIAM STALLINGS','NATHAN MARZ AND JAMES WARREN','THOMAS ERL']
 details = ['This book mainly deals with some of the basic concepts in programming language like Java which makes it easy for the to learn for a beginner.', 'The database management systems book mainly deals with basic concepts in creating and maintaining a database for a beginner.', 'This book mainly contains the introduction concept in programming but is dealt with a unconventional programming language like Python. It contains all the concepts that deals with designing and developing a programming language as a whole.']
